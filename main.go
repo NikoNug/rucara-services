@@ -16,6 +16,8 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
+	app.Static("/", "./static")
+
 	database.Connect()
 	routes.SetupRoutes(app)
 
